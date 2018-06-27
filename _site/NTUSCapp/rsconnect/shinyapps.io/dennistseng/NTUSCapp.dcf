@@ -1,0 +1,12 @@
+name: NTUSCapp
+title: NTUSCapp
+username:
+account: dennistseng
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 365316
+bundleId: 1443576
+url: https://dennistseng.shinyapps.io/NTUSCapp/
+when: 1529687033.98606
+asMultiple: FALSE
+asStatic: FALSE
