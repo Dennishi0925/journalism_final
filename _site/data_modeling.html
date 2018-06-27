@@ -221,6 +221,70 @@ $(document).ready(function () {
 
 <div id="brief-introduction" class="section level3">
 <h3><strong>Brief Introduction</strong></h3>
+<p>由於最重要的變數為學代出席率，因此我嘗試尋找兩份資料當中的變數與學貸出席率的關係。我用了院別、年級、任期、各式投票率如廢票率、支持率、院別人口比例等，很遺憾的是所有線性回歸模型的解釋能力都有點差，所以底下就直接呈現其中幾個(失敗的)模型。</p>
+<pre><code>## 
+## Call:
+## lm(formula = Attnd_Rate ~ support_rate + nonobj_Rate * competitive + 
+##     vote_rate + competitive + void_rate + college_population_rate, 
+##     data = data)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.57687 -0.17863  0.02281  0.18053  0.50413 
+## 
+## Coefficients:
+##                          Estimate Std. Error t value Pr(&gt;|t|)   
+## (Intercept)               0.34513    0.14083   2.451  0.01523 * 
+## support_rate              0.32500    0.16177   2.009  0.04605 * 
+## nonobj_Rate              -0.09538    0.15911  -0.599  0.54962   
+## competitive1              0.06221    0.07811   0.796  0.42684   
+## vote_rate                 1.69493    0.52982   3.199  0.00163 **
+## void_rate                -1.21692    1.23469  -0.986  0.32566   
+## college_population_rate   0.78944    0.86004   0.918  0.35991   
+## nonobj_Rate:competitive1  0.23937    0.30098   0.795  0.42749   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.2478 on 178 degrees of freedom
+## Multiple R-squared:  0.1155, Adjusted R-squared:  0.08068 
+## F-statistic: 3.319 on 7 and 178 DF,  p-value: 0.002401</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = Attnd_Rate ~ support_rate + vote_rate, data = data_lm)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.52583 -0.18627  0.01775  0.18417  0.50164 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)   0.44717    0.04374  10.223  &lt; 2e-16 ***
+## support_rate  0.18693    0.11204   1.668    0.097 .  
+## vote_rate     1.71827    0.40725   4.219 3.85e-05 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.2476 on 183 degrees of freedom
+## Multiple R-squared:  0.09172,    Adjusted R-squared:  0.08179 
+## F-statistic: 9.239 on 2 and 183 DF,  p-value: 0.0001504</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = Attnd_Rate ~ vote_rate, data = data_lm)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.55290 -0.17892  0.01503  0.18793  0.46820 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  0.50021    0.03019  16.568  &lt; 2e-16 ***
+## vote_rate    1.57930    0.40057   3.943 0.000114 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.2488 on 184 degrees of freedom
+## Multiple R-squared:  0.0779, Adjusted R-squared:  0.07289 
+## F-statistic: 15.54 on 1 and 184 DF,  p-value: 0.0001144</code></pre>
 </div>
 
 
