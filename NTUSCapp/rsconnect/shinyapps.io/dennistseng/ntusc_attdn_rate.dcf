@@ -1,0 +1,12 @@
+name: ntusc_attdn_rate
+title: NTUSC_Attdn_Rate
+username:
+account: dennistseng
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 368284
+bundleId: 1451395
+url: https://dennistseng.shinyapps.io/ntusc_attdn_rate/
+when: 1530075849.10502
+asMultiple: FALSE
+asStatic: FALSE

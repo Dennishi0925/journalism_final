@@ -27,10 +27,10 @@ term <- data_pornot %>%
   unlist()
 names(term) <- NULL
 # Define UI for application that plots features of movies
-ui <- fluidPage(theme = shinytheme("united"),
+ui <- fluidPage(theme = shinytheme("journal"),
                 useShinyjs(),
                 #multiple pages
-                navbarPage("NTUSC!",
+                navbarPage("NTUSC_Attnd_Rate!",
                            tabPanel("104-1",
                                     sidebarLayout(position = "right",
                                                   sidebarPanel(div(id ="Sidebar1041",
