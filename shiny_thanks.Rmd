@@ -11,7 +11,7 @@ font_add("jh", "msjh.ttc")
 
 ### **NTUSC Shiny APP**
 
-點下 [**`NTUSC app`**](https://dennistseng.shinyapps.io/NTUSCapp/) 就可以看到最後 shiny app的成果了。
+點下 [**`NTUSC app`**](https://dennistseng.shinyapps.io/ntusc_attdn_rate/) 就可以看到最後 shiny app的成果了。
 
 ### **Thank you all**
 
